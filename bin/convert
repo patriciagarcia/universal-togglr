@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+'use strict';
+
+var minimist = require('minimist');
+var options = minimist(process.argv.slice(2));
+
+var main = require('../index');
+var config = require('../config/config');
+
+options.config = config;
+
+main(options, function(error) {
+  if (error) {
+    console.log(error);
+    return;
+  }
+
+  console.log('done.');
+});

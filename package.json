@@ -1,0 +1,33 @@
+{
+  "name": "universal-togglr",
+  "version": "1.0.0",
+  "description": "Time tracking CSV converter: universal to Toggl",
+  "bin": "./bin/convert",
+  "scripts": {
+    "test": "mocha test/**/*-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patriciagarcia/universal-togglr.git"
+  },
+  "keywords": [
+    "toggl",
+    "mite",
+    "convert"
+  ],
+  "author": "Patricia Garcia <pat@patriciagarcia.me>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/patriciagarcia/universal-togglr/issues"
+  },
+  "homepage": "https://github.com/patriciagarcia/universal-togglr#readme",
+  "dependencies": {
+    "lodash": "^3.10.0",
+    "minimist": "^1.1.2",
+    "moment": "^2.10.3",
+    "papaparse": "^4.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
