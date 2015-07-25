@@ -35,7 +35,7 @@ module.exports = function convertMite2Toggl(options, callback) {
           return callback('couldn\'t write the file. Error: ' + error);
         }
 
-        console.log('- Saved converted CSV to file');
+        console.log('- saved converted CSV to file');
 
         return callback();
       });
