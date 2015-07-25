@@ -17,10 +17,6 @@ describe('convert', function() {
       };
 
       convert(options, function(error, convertedCsv) {
-        if (error) {
-          throws(error);
-        }
-
         assert.equal(error, null);
         assert.equal(convertedCsv, toggldCsv);
       });
@@ -44,10 +40,6 @@ describe('convert', function() {
         };
 
         convert(options, function(error, convertedCsv) {
-          if (error) {
-            throws(error);
-          }
-
           assert.equal(error, null);
           assert.equal(convertedCsv, toggldCsv);
         });
@@ -65,10 +57,6 @@ describe('convert', function() {
         };
 
         convert(options, function(error, convertedCsv) {
-          if (error) {
-            throws(error);
-          }
-
           assert.equal(error, null);
           assert.equal(convertedCsv, toggldCsv);
         });
@@ -86,10 +74,6 @@ describe('convert', function() {
         };
 
         convert(options, function(error, convertedCsv) {
-          if (error) {
-            throws(error);
-          }
-
           assert.equal(error, null);
           assert.equal(convertedCsv, toggldCsv);
         });
@@ -107,10 +91,6 @@ describe('convert', function() {
         };
 
         convert(options, function(error, convertedCsv) {
-          if (error) {
-            throws(error);
-          }
-
           assert.equal(error, null);
           assert.equal(convertedCsv, toggldCsv);
         });
