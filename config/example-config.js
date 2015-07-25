@@ -3,10 +3,10 @@
 module.exports = {
   email: 'drhorrible@evil_league_of_evil.com',
   startTime: '00:00:00',
-  descriptionField: 'Note',
-  dateField: 'Date',
+  descriptionColumn: 'Note',
+  dateColumn: 'Date',
   dateFormat: 'YYYY-MM-DD',
-  durationField: 'Hours',
+  durationColumn: 'Hours',
   columns: {
     'Project': [
       {
