@@ -26,15 +26,22 @@ describe('convert', function() {
     beforeEach(function() {
       config = {
         email: 'test@example.com',
-        dateColumn: 'column2',
         startTime: '00:00:00',
-        durationColumn: 'duration'
+        fields: {
+          'Start date': {
+            column: 'column2'
+          },
+          'Project': {},
+          'Client': {},
+          'Task': {},
+          'Tags': {}
+        }
       };
     });
     describe('Project', function() {
       it('uses a column from the source CSV if specified in `config.projectColumn`', function() {
-        config.projectColumn = 'proj';
-        var sourceCsv = "proj,column2,duration\ntest,test2,1";
+        config.fields['Project'].column = 'proj';
+        var sourceCsv = "proj,column2,Hours\ntest,test2,1";
         var toggldCsv = "Email,Client,Project,Task,Description,Tags,Start date,Start time,Duration,Billable\r\ntest@example.com,,test,,,,test2,00:00:00,01:00:00,Y";
 
         var options = {
@@ -50,8 +57,8 @@ describe('convert', function() {
     });
     describe('Client', function() {
       it('uses a column from the source CSV if specified in `config.clientColumn`', function() {
-        config.clientColumn = 'client';
-        var sourceCsv = "client,column2,duration\ntest,test2,1";
+        config.fields['Client'].column = 'client';
+        var sourceCsv = "client,column2,Hours\ntest,test2,1";
         var toggldCsv = "Email,Client,Project,Task,Description,Tags,Start date,Start time,Duration,Billable\r\ntest@example.com,test,,,,,test2,00:00:00,01:00:00,Y";
 
         var options = {
@@ -67,8 +74,8 @@ describe('convert', function() {
     });
     describe('Task', function() {
       it('uses a column from the source CSV if specified in `config.taskColumn`', function() {
-        config.taskColumn = 'task';
-        var sourceCsv = "task,column2,duration\ntest,test2,1";
+        config.fields['Task'].column = 'task';
+        var sourceCsv = "task,column2,Hours\ntest,test2,1";
         var toggldCsv = "Email,Client,Project,Task,Description,Tags,Start date,Start time,Duration,Billable\r\ntest@example.com,,,test,,,test2,00:00:00,01:00:00,Y";
 
         var options = {
@@ -84,8 +91,8 @@ describe('convert', function() {
     });
     describe('Tags', function() {
       it('uses a column from the source CSV if specified in `config.tagsColumn`', function() {
-        config.tagsColumn = 'tags';
-        var sourceCsv = "tags,column2,duration\ntest,test2,1";
+        config.fields['Tags'].column = 'tags';
+        var sourceCsv = "tags,column2,Hours\ntest,test2,1";
         var toggldCsv = "Email,Client,Project,Task,Description,Tags,Start date,Start time,Duration,Billable\r\ntest@example.com,,,,,test,test2,00:00:00,01:00:00,Y";
 
         var options = {

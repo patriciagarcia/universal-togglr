@@ -3,135 +3,61 @@
 module.exports = {
   email: 'drhorrible@evil_league_of_evil.com',
   startTime: '00:00:00',
-  descriptionColumn: 'Note',
-  dateColumn: 'Date',
-  dateFormat: 'YYYY-MM-DD',
-  durationColumn: 'Hours',
-  columns: {
-    'Project': [
-      {
-        value: 'World domination',
-        conditions: [
-          {
-            origColumn: 'Project',
-            value: 'Conquer the world'
-          }
-        ]
-      },
-      {
-        value: 'Moon domination',
-        conditions: [
-          {
-            origColumn: 'Project',
-            value: 'Expand to the moon'
-          }
-        ]
+  fields: {
+    'Start date': {
+      column: 'Date',
+      dateFormat: 'YYYY-MM-DD'
+    },
+    'Description': {
+      column: 'Note'
+    },
+    'Project': {
+      rules: [
+        {
+          value: 'World domination',
+          conditions: [
+            {
+              origColumn: 'Project',
+              value: 'Conquer the world'
+            }
+          ]
+        },
+        {
+          value: 'Moon domination',
+          conditions: [
+            {
+              origColumn: 'Project',
+              value: 'Expand to the moon'
+            }
+          ]
+        }
+      ]
+    },
+    'Client': {
+      column: 'Project',
+      translations: {
+        'Conquer the world': 'Earth Evil Corp',
+        'Expand to the moon': 'Moon Evil Corp'
       }
-    ],
-    'Client': [
-      {
-        value: 'Earth Evil Corp',
-        conditions: [
-          {
-            origColumn: 'Project',
-            value: 'Conquer the world'
-          }
-        ]
-      },
-      {
-        value: 'Moon Evil Corp',
-        conditions: [
-          {
-            origColumn: 'Project',
-            value: 'Expand to the moon'
-          }
-        ]
+    },
+    'Task': {
+      column: 'Note',
+      translations: {
+        'Super villain sprint planning': 'Agiling',
+        'Backlog': 'Agiling',
+        'Villain school coaching': 'Give back to the community',
+        'Kick off': 'Meetings',
+        'Remove all cat gifs from the Internet': '#Create chaos'
+
       }
-    ],
-    'Task': [
-      {
-        value: 'Agiling',
-        conditions: [
-          {
-            origColumn: 'Note',
-            value: 'Super villain sprint planning'
-          }
-        ]
-      },
-      {
-        value: 'Agiling',
-        conditions: [
-          {
-            origColumn: 'Note',
-            value: 'Backlog'
-          }
-        ]
-      },
-      {
-        value: 'Give back to the community',
-        conditions: [
-          {
-            origColumn: 'Note',
-            value: 'Villain school coaching'
-          }
-        ]
-      },
-      {
-        value: 'Meetings',
-        conditions: [
-          {
-            origColumn: 'Note',
-            value: 'Kick off'
-          }
-        ]
-      },
-      {
-        value: '#Create chaos',
-        conditions: [
-          {
-            origColumn: 'Note',
-            value: 'Remove all cat gifs from the Internet'
-          }
-        ]
-      },
-    ],
-    'Tags': [
-      {
-        value: 'meeting',
-        conditions: [
-          {
-            origColumn: 'Service',
-            value: 'meeting'
-          }
-        ]
-      },
-      {
-        value: 'implementing',
-        conditions: [
-          {
-            origColumn: 'Service',
-            value: 'stuff'
-          }
-        ]
-      },
-      {
-        value: 'community',
-        conditions: [
-          {
-            origColumn: 'Service',
-            value: 'support'
-          }
-        ]
-      },
-      {
-        value: 'project mgmt',
-        conditions: [
-          {
-            origColumn: 'Service',
-            value: 'PMing'
-          }
-        ]
+    },
+    'Tags': {
+      column: 'Service',
+      translations: {
+        stuff: 'implementing',
+        support: 'community',
+        'PMing': 'project mgmt'
       }
-    ]
+    }
   }
 };
