@@ -1,7 +1,7 @@
 var fs = require('fs');
 var assert = require('assert');
 var convert = require('../lib/convert');
-var config = require('../config/example-config');
+var config = require('./config');
 var moment = require('moment');
 
 describe('convert', function() {
