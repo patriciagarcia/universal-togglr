@@ -12,16 +12,11 @@ module.exports = {
       column: 'Note'
     },
     'Project': {
+      column: 'Project',
+      translations: {
+        'Conquer the world': 'World domination'
+      },
       rules: [
-        {
-          value: 'World domination',
-          conditions: [
-            {
-              origColumn: 'Project',
-              value: 'Conquer the world'
-            }
-          ]
-        },
         {
           value: 'Moon domination',
           conditions: [
