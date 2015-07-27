@@ -53,8 +53,8 @@ Add a `config.js` file inside `config` folder to set up your configuration. The 
     ```
 
     The translation works in the following way:
-    1. If a `column` is provided but there is no `translations` field, the source column will be directly copied to the Toggl column.
-    2. If both a `column` and a `translations` field are provided, the script will try to translate (via `translations` object) the source column into the Toggl column, if no translation is found, the source column will be copied directly.
+    1. If a `column` is provided but there is no `translations` field, the source column will be directly copied to the Toggl column. Be careful! This can cause new projects, clients, tasks or tags to be created! (and we have enough of those as it is ;)).
+    2. If both a `column` and a `translations` field are provided, the script will translate (via `translations` object) the source column into the Toggl column, if no translation is found, the field will be left empty.
     3. If a `rules` field is provided, the script will try to match a source column given a conditions array into a Toggl column. For example in the example above if the `Note` column in the source have the value `Stand Up` the `Tags` column will be set to `meeting`. You can provide several `conditions`, if more than one condition is provided ALL of them should evaluate to `true` for the rule to be used.
 
     The script will try to fill the destination column following the three steps mentioned before, if none of them works, the destination column will be left empty.

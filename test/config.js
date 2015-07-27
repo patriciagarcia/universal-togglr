@@ -49,6 +49,7 @@ module.exports = {
     'Tags': {
       column: 'Service',
       translations: {
+        meeting: 'meeting',
         stuff: 'implementing',
         support: 'community',
         'PMing': 'project mgmt'
